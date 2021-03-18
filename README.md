@@ -1,12 +1,12 @@
 # Command to run the project after git clone
-#for front end
-cd library /n
-cd client /n
-npm install /n
-npm start
+#for front end <br />  
+cd library <br /> 
+cd client <br /> 
+npm install <br /> 
+npm start<br /> 
 
 #for backend
-cd library /n
-cd server /n
-npm install /n
-npm start
+cd library <br /> 
+cd server <br /> 
+npm install <br /> 
+npm start<br /> 
