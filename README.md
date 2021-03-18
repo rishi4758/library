@@ -11,3 +11,5 @@ cd library <br />
 cd server <br /> 
 npm install <br /> 
 npm start<br /> 
+
+Note: The database used in the project is sql make sure you have sql installed to run the database
