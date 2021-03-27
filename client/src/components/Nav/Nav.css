@@ -1,4 +1,4 @@
-#nav {
+#nav1 {
   background-color: #2196f3;
   height: 60px;
   margin-bottom: 5px;
@@ -6,8 +6,11 @@
   align-items: center;
   justify-content: space-between;
 }
-
-#nav ul {
+.navibar {
+  display: flex;
+  justify-content: space-between;
+}
+#nav1 ul {
   list-style-type: none;
   float: right;
   display: flex;
@@ -15,7 +18,7 @@
   align-items: center;
 }
 
-#nav ul li {
+#nav1 ul li {
   display: inline;
   padding: 10px 15px;
   font-size: 18px;
@@ -46,11 +49,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 } */
-.logo {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+
 .logo span {
   font-size: 20px;
   font-weight: 700;

@@ -17,56 +17,29 @@ class Nav extends React.Component {
   render() {
     return (
       <>
-        <div id="nav">
-          <div className="logo">
+        <div id="nav1" className="row d-flex justify-content-center ">
+          <div className="logo col-4 mt-4 ">
             <span>LIBRARY MANAGEMENT SYSTEM</span>
           </div>
-          <ul>
-            <li
-              style={
-                window.location.pathname === "/"
-                  ? { display: "none" }
-                  : { display: "inline-block" }
-              }
-            >
-              <Link className="link" to="/" onClick={this.update}>
-                Home
-              </Link>
-            </li>
-            <li
-              style={
-                window.location.pathname === "/issue"
-                  ? { display: "none" }
-                  : { display: "inline-block" }
-              }
-            >
-              <Link className="link" to="/issue" onClick={this.update}>
-                Issue Book
-              </Link>
-            </li>
-            <li
-              style={
-                window.location.pathname === "/return"
-                  ? { display: "none" }
-                  : { display: "inline-block" }
-              }
-            >
-              <Link className="link" to="/return" onClick={this.update}>
-                Return Book
-              </Link>
-            </li>
-            <li
-              style={
-                window.location.pathname === "/search"
-                  ? { display: "none" }
-                  : { display: "inline-block" }
-              }
-            >
-              <Link className="link" to="/search" onClick={this.update}>
-                Search
-              </Link>
-            </li>
-          </ul>
+          <div className=" offset-3 col-5 mt-2">
+            <ul>
+              <li>
+                <Link className="link" to="/" onClick={this.update}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link className="link" to="/issue" onClick={this.update}>
+                  Issue Book
+                </Link>
+              </li>
+              <li>
+                <Link className="link" to="/return" onClick={this.update}>
+                  Return Book
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </>
     );

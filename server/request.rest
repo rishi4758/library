@@ -1,0 +1,34 @@
+GET http://localhost:5004/register
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNWZiOTI1ZTNkODIyYzA0NTg4OWVmMjk5IiwiaWF0IjoxNjA1OTczNjM2LCJleHAiOjE2MDU5NzM3MjJ9._WDgaBnMXVmHa2zP2D6IN1mtUWiGP8pKQTGExm0RlaU
+###
+
+
+
+ ####
+POST  http://localhost:5004/login
+Content-Type:application/json
+
+{"email":"rishavrapta79@gmail.com",
+"password":"123456"}
+####
+POST  http://localhost:5004/register
+Content-Type:application/json
+
+{"email":"rishavrapta79@gmail.com",
+"password":"123456"}
+###
+POST  http://localhost:5004/auth
+Content-Type:application/json
+
+{ "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGF0YSBpcyBmb3IgbGVhcm5pbmcgand0IGFkdmFuY2UiLCJpYXQiOjE2MDU3ODcxMjl9.c8_cFRaH5yrwDpsAg--cCUv8CmQlOmm1z2HSg5MNVkY"}
+
+###
+DELETE  http://localhost:5005/token
+Content-Type: application/json
+
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGF0YSBpcyBmb3IgbGVhcm5pbmcgand0IGFkdmFuY2UiLCJpYXQiOjE2MDU3ODY2NjZ9.yQ7q6KXdRNE2FP9Rkj924BcArYR8ARBs8fPFXiBlqic"}
+
+
+GET http://localhost:5004/api/getIssues/1
+
+###

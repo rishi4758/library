@@ -1,10 +1,12 @@
 import React from "react";
-import Nav from "./components/Nav/Nav";
-import Carousel from "./components/carousel";
+
 import Books from "./components/Books/Books";
 import Issue from "./components/Issue/Issue";
 import Return from "./components/Return/Return";
 import Search from "./components/search/search";
+import Form from "./components/Form/index";
+import Register from "./components/Form/register";
+import AuthCheck from "./hoc/authCheck";
 import "./App.css";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -14,13 +16,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <Nav />
-          <Carousel />
           <Switch>
-            <Route path="/" exact strict component={Books} />
-            <Route path="/issue" exact strict component={Issue} />
-            <Route path="/return" exact strict component={Return} />
-            <Route path="/search" exact strict component={Search} />
+            <Route exact path="/" strict component={Form} />
+            <Route path="/form" exact strict component={AuthCheck(Books)} />
+            <Route path="/issue" exact strict component={AuthCheck(Issue)} />
+            <Route path="/return" exact strict component={AuthCheck(Return)} />
+            <Route path="/register" exact strict component={Register} />
+
             <Redirect from="*" to="/" />
           </Switch>
         </BrowserRouter>
