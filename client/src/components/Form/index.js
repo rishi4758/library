@@ -95,7 +95,7 @@ function Form({ history }) {
                     By signing up, you accept our
                     <a href="#" className="ancor">
                       <u>Terms of Services</u>
-                    </a>{" "}
+                    </a>
                     and
                     <a href="#" className="ancor">
                       <u>Privacy Policy</u>

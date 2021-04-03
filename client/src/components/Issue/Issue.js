@@ -31,19 +31,32 @@ class Books extends React.Component {
           this.setState({
             books: [
               ...this.state.books,
-              <tr key={el._id}>
-                <td>{el.name.toUpperCase()}</td>
-                <td>{el.author}</td>
-                <td>{el.semester}</td>
-                <td>
+
+              <div key={el.id} className="  col-3  ml-4 card">
+                <img
+                  className="cardImg"
+                  src={`./images/book.png`}
+                  alt="videolevels-img"
+                />
+                <div key={el.id} className="data">
+                  <h4>{el.name.toUpperCase()}</h4>
+                  <h5 className="row">{el.author}</h5>
+                  <h5 className="row"> count: {el.count}</h5>
+                  <h5 className="row"> semester:{el.semester}</h5>
+                  {/* <tr key={el.id}>
+                      <td>{el.name.toUpperCase()}</td>
+                      <td>{el.author}</td>
+                      <td>{el.count}</td>
+                      <td>{el.semester}</td>
+                    </tr> */}
                   <button
-                    className="btn btn-primary"
+                    className="btn btn-primary button"
                     onClick={() => this.issueIt(el)}
                   >
                     Issue
                   </button>
-                </td>
-              </tr>,
+                </div>
+              </div>,
             ],
           })
         )
@@ -65,7 +78,6 @@ class Books extends React.Component {
         sid: parseInt(document.getElementById("id").value),
       }),
     }).then((res) => {
-      console.log(res);
       window.alert(`${el.name} has beeen issued`);
       this.props.history.push("/form");
     });
@@ -73,36 +85,43 @@ class Books extends React.Component {
 
   render() {
     return (
-      <div id="issue" className="text-center">
-        <form onSubmit={this.fetchData}>
-          <label>Enter student Id </label>
-          <input
-            className="form-control sel"
-            type="number"
-            placeholder="1 - 10"
-            id="id"
-            min="1"
-            onChange={this.componentDidMount}
-            required
-          ></input>
-          <select className="form-control sel" id="select">
-            <option disabled>Select Semester</option>
-            <option value="1">1st Sem</option>
-            <option value="2">2nd Sem</option>
-            <option value="3">3rd Sem</option>
-            <option value="4">4th Sem</option>
-            <option value="5">5th Sem</option>
-            <option value="6">6th Sem</option>
-          </select>
-          <button className="btn btn-success" type="submit">
-            Submit
-          </button>
-        </form>
-        <table id="results" className="table table-hover">
-          {this.state.header}
-          <tbody>{this.state.books}</tbody>
-        </table>
-      </div>
+      <>
+        <span className="heading ">
+          Please Enter the student school id to issue a new book:
+        </span>
+        <div id="issue" className=" container ">
+          <form onSubmit={this.fetchData} className="justify-content-center">
+            <label className="label mt-3">Enter student Id</label>
+            <input
+              className="form-control sel"
+              type="number"
+              placeholder="1 - 10"
+              id="id"
+              min="1"
+              onChange={this.componentDidMount}
+              required
+            ></input>
+            <label className="label">Select Semester </label>
+            <select className="form-control sel" id="select">
+              <option disabled>Select Semester</option>
+              <option value="1">1st Sem</option>
+              <option value="2">2nd Sem</option>
+              <option value="3">3rd Sem</option>
+              <option value="4">4th Sem</option>
+              <option value="5">5th Sem</option>
+              <option value="6">6th Sem</option>
+            </select>
+            <button className="btn btn-success" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="container justify-content-center ">
+          <div className="row d-flex justify-content-center">
+            {this.state.books}
+          </div>
+        </div>
+      </>
     );
   }
 }

@@ -17,7 +17,7 @@ class Return extends React.Component {
           <tr>
             <th scope="col">Book Name</th>
             <th scope="col">Author</th>
-            <th scope="col">Semester No</th>
+
             <th scope="col">Issue Date</th>
             <th scope="col">Return Deadline</th>
             <th scope="col"></th>
@@ -39,21 +39,47 @@ class Return extends React.Component {
             this.setState({
               books: [
                 ...this.state.books,
-                <tr key={el.bookId._id}>
-                  <td>{el.bookId.name.toUpperCase()}</td>
-                  <td>{el.bookId.author}</td>
-                  <td>{el.semester}</td>
-                  <td>{el.date}</td>
-                  <td>{el.deadline}</td>
-                  <td>
+
+                <div key={el.id} className="  col-3  ml-4 card">
+                  <img
+                    className="cardImg"
+                    src={`./images/book.png`}
+                    alt="videolevels-img"
+                  />
+                  <div key={el.bookId._id} className="data">
+                    <h4>{el.bookId.name.toUpperCase()}</h4>
+                    <h5 className="row">{el.bookId.author}</h5>
+                    <h5 className="row"> Issued: {el.date}</h5>
+                    <h5 className="row"> deadline:{el.deadline}</h5>
+                    {/* <tr key={el.id}>
+                    <td>{el.name.toUpperCase()}</td>
+                    <td>{el.author}</td>
+                    <td>{el.count}</td>
+                    <td>{el.semester}</td>
+                  </tr> */}
                     <button
-                      className="btn btn-primary"
+                      className="btn btn-primary button"
                       onClick={() => this.returnIt(el)}
                     >
                       Return
                     </button>
-                  </td>
-                </tr>,
+                  </div>
+                </div>,
+                // <tr key={el.bookId._id}>
+                //   <td>{el.bookId.name.toUpperCase()}</td>
+                //   <td>{el.bookId.author}</td>
+
+                //   <td>{el.date}</td>
+                //   <td>{el.deadline}</td>
+                //   <td>
+                //     <button
+                //       className="btn btn-primary"
+                //       onClick={() => this.returnIt(el)}
+                //     >
+                //       Return
+                //     </button>
+                //   </td>
+                // </tr>,
               ],
             })
           );
@@ -77,7 +103,6 @@ class Return extends React.Component {
         sid: parseInt(document.getElementById("sid").value),
       }),
     }).then((res) => {
-      console.log(res);
       window.alert(`${el.bookId.name} has beeen returned Thank You!`);
       this.props.history.push("/form");
     });
@@ -85,28 +110,33 @@ class Return extends React.Component {
 
   render() {
     return (
-      <div id="return" className="text-center">
-        <form onSubmit={this.fetchData}>
-          <label>Enter student Id</label>
-          <input
-            className="form-control sel"
-            type="number"
-            placeholder="0 - 10"
-            id="sid"
-            min="1"
-            required
-          ></input>
-          <button className="btn btn-success" type="submit">
-            Submit
-          </button>
-        </form>
-        <br />
-        {this.state.name}
-        <table id="rResults" className="table table-hover">
-          {this.state.header}
-          <tbody>{this.state.books}</tbody>
-        </table>
-      </div>
+      <>
+        <span className="heading ">
+          Please Enter the student school id to return the book:
+        </span>
+        <div id="return" className="text-center">
+          <form onSubmit={this.fetchData}>
+            <label className=" mt-3">Enter student Id</label>
+            <input
+              className="form-control sel"
+              type="number"
+              placeholder="0 - 10"
+              id="sid"
+              min="1"
+              required
+            ></input>
+            <button className="btn btn-success" type="submit">
+              Submit
+            </button>
+          </form>
+          <br />
+        </div>
+        <div className="container justify-content-center ">
+          <div className="row d-flex justify-content-center">
+            {this.state.books}
+          </div>
+        </div>
+      </>
     );
   }
 }

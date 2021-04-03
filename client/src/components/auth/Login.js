@@ -34,7 +34,6 @@ function MyForm({ history }) {
     e.preventDefault();
     if (!state.formIsValid) {
       setEmpty(true);
-      console.log("please fill all the required field");
     } else {
       let response = await dispatch(
         loginUser(history, {

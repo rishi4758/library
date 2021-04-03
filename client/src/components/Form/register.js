@@ -6,15 +6,15 @@ function Register({ history }) {
   const [password, setPassword] = useState("");
   const submitHandler = async (e) => {
     e.preventDefault();
-    // console.log(email, password);
+
     const data = { email: email, password: password };
 
     const registerUrl = "http://localhost:5004/register";
-    console.log(email, password);
+
     const response = await axios.post(registerUrl, data, {
       headers: { "Content-Type": "application/json" },
     });
-    console.log("user signed", response);
+
     if (response.data.status === 200 || 201) {
       history.push("/");
     }

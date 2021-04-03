@@ -1,34 +1,34 @@
 import React from "react";
-
+import "./style.css";
 class Carousel extends React.Component {
   render() {
     return (
       <>
         <div
           id="carouselExampleControls"
-          class="carousel slide"
+          class="carousel slide carouselContainer"
           data-ride="carousel"
           style={{ marginBottom: "60px" }}
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                class="d-block w-100"
-                src="https://picsum.photos/id/0/1600/600"
+                class="d-block w-100 carImages"
+                src="./images/b1.jpeg"
                 alt="First slide"
               />
             </div>
             <div class="carousel-item">
               <img
-                class="d-block w-100"
-                src="https://picsum.photos/id/1/1600/600"
+                class="d-block w-100 carImages"
+                src="https://picsum.photos/id/1/1600/450"
                 alt="Second slide"
               />
             </div>
             <div class="carousel-item">
               <img
-                class="d-block w-100"
-                src="https://picsum.photos/id/1010/1600/600"
+                class="d-block w-100 carImages"
+                src="https://picsum.photos/id/1010/1600/450"
                 alt="Third slide"
               />
             </div>

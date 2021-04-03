@@ -24,7 +24,7 @@ class Nav extends React.Component {
           <div className=" offset-3 col-5 mt-2">
             <ul>
               <li>
-                <Link className="link" to="/" onClick={this.update}>
+                <Link className="link" to="/form" onClick={this.update}>
                   Home
                 </Link>
               </li>

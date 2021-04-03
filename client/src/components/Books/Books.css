@@ -1,25 +1,81 @@
 #books {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 #sel {
-    width: 35%;
-    margin: 10px auto;
+  width: 35%;
+  margin: 10px auto;
 }
 
 #results {
-    margin: 25px auto;
-    width: 60%;
-    border-radius: 8px;
-    background-color: rgb(111, 167, 219);
+  margin: 25px auto;
+  width: 60%;
+  border-radius: 8px;
+  background-color: rgb(111, 167, 219);
 }
 
 .table td {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 #heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+}
+
+.card {
+  position: relative;
+  height: auto;
+  width: 360px;
+  box-shadow: 0 0 20px #000000;
+  transition: all 0.5s;
+  animation: myCard 0.9s ease-in-out;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.card:hover {
+  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 1px rgba(0, 0, 0, 0.22);
+  transform: scale(0.9, 0.9);
+}
+@keyframes myCard {
+  from {
+    opacity: 0;
+    transform: rotateY(100deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+.cardImg {
+  width: 100%;
+  height: 350px;
+}
+.data {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 10;
+}
+h2 {
+  color: #fff;
+  display: inline-block;
+}
+h4 {
+  color: #fff;
+  display: inline-block;
 }

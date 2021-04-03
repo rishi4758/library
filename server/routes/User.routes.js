@@ -19,7 +19,7 @@ module.exports = (app) => {
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
       }).save();
-      console.log(req.body);
+
       return res.status(200).json({
         status: 200,
         user: user,
