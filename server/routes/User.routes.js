@@ -57,12 +57,7 @@ module.exports = (app) => {
 
       const token = generateToken({ user: user });
 
-      new Books({
-        name: "The Jungle book",
-        author: "rishav",
-        semester: 1,
-        count: 50,
-      }).save();
+  
 
       res.status(200).send({
         status: 200,
