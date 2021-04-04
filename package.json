@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": " cd server && npm install && node index",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client "
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build "
   },
   "repository": {
     "type": "git",
