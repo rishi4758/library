@@ -15,3 +15,21 @@ npm start<br />
 #Demonstration<br/>
 link- https://drive.google.com/file/d/1o0fBlIcBRmcyxRQfJH6Bzj04S8NuX4_v/view?usp=sharing
 <br/>
+
+#api testing<br/>
+testing has been done with post man and all the apis are avalable in request.rest file inside server directory with their respective data.<br/>
+
+#database<br/>
+database has been  deployed from localhost to mongodb cloud so that no need to configure , it is already configured and connected to the app.<br/>
+
+#features<br/>
+user can register and signup with their email and password.<br/>
+securuty for  authorisation with  JWT authentication. <br/>
+cloud available database in mongodb. <br/>
+user can see  all available boooks  in the library<br/>
+user can check the count of specific book in library<br/>
+user can issue the book based on student id card. <br/>
+user can also return the book from app <br/>
+user can check the date of issue of the book<br/>
+user can check the deadline for the issued book<br/>
+
