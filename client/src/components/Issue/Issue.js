@@ -1,6 +1,6 @@
 import React from "react";
 import "./Issue.css";
-
+import { domain } from "../../config";
 class Books extends React.Component {
   state = {
     header: <thead></thead>,
@@ -24,7 +24,7 @@ class Books extends React.Component {
       books: [],
     });
 
-    fetch(`/api/getBooks/${sem}`)
+    fetch(`${domain}/api/getBooks/${sem}`)
       .then((res) => res.json())
       .then((books) =>
         books.forEach((el) =>
@@ -70,7 +70,7 @@ class Books extends React.Component {
   }
 
   issueIt = (el) => {
-    fetch("/api/borrow", {
+    fetch(`${domain}/api/borrow`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

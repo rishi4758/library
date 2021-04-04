@@ -1,4 +1,5 @@
 import React from "react";
+import { domain } from "../../config";
 import "./Books.css";
 
 class Books extends React.Component {
@@ -17,7 +18,7 @@ class Books extends React.Component {
   };
 
   async componentDidMount() {
-    await fetch("/api/getBooks")
+    await fetch(`${domain}/api/getBooks`)
       .then((res) => res.json())
       .then((books) => {
         books.map((el) => {

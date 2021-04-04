@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { domain } from "../../config";
 import axios from "axios";
 import "./style.css";
 function Register({ history }) {
@@ -9,7 +10,7 @@ function Register({ history }) {
 
     const data = { email: email, password: password };
 
-    const registerUrl = "http://localhost:5004/register";
+    const registerUrl = `${domain}/register`;
 
     const response = await axios.post(registerUrl, data, {
       headers: { "Content-Type": "application/json" },

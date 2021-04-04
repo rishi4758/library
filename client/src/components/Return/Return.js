@@ -1,6 +1,6 @@
 import React from "react";
 import "./Return.css";
-
+import { domain } from "../../config";
 class Return extends React.Component {
   state = {
     header: <thead></thead>,
@@ -27,7 +27,7 @@ class Return extends React.Component {
       books: [],
     });
 
-    fetch(`/api/getIssues/${sid}`)
+    fetch(`${domain}/api/getIssues/${sid}`)
       .then((res) => res.json())
       .then((books) => {
         if (books.length > 0) {
@@ -94,7 +94,7 @@ class Return extends React.Component {
   };
 
   returnIt = (el) => {
-    fetch("/api/return", {
+    fetch(`${domain}/api/return`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { domain } from "../../config";
 import axios from "axios";
 import "./style.css";
 function Form({ history }) {
@@ -8,7 +9,7 @@ function Form({ history }) {
     e.preventDefault();
     // console.log(email, password);
     const data = { email: email, password: password };
-    const loginUrl = "http://localhost:5004/login";
+    const loginUrl = `${domain}/login`;
 
     console.log(email, password);
     const response = await axios.post(loginUrl, data, {
