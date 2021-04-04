@@ -24,9 +24,7 @@ function Form({ history }) {
   return (
     <div className="d-flex">
       <div className="d-none d-md-block col-md-6 image-container">
-        <div className="bg-color"></div>
-
-        <div className="text d-flex justify-content-center align-items-center w-100 h-100">
+        <div className="text d-flex justify-content-center w-100 h-100 loginText">
           <div className="d-flex flex-column align-items-start">
             <h1>Join Library today</h1>
             <p>Study hard for better future.</p>

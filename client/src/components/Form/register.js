@@ -23,17 +23,19 @@ function Register({ history }) {
   };
   return (
     <div className="d-flex">
-      <div className="d-none d-md-block col-md-6 image-container">
+      <div className="d-none d-md-block col-md-6 regimage-container">
         <div className="bg-color"></div>
 
-        <div className="text d-flex justify-content-center align-items-center w-100 h-100">
+        <div className="text d-flex justify-content-center align-items-center w-100 h-100 ">
           <div className="d-flex flex-column align-items-start">
-            <h1>Join Library today</h1>
-            <p>Study hard for better future.</p>
+            <h1 style={{ color: "#fff" }}>Sign up today</h1>
+            <p style={{ color: "#fff" }}>
+              When you read a book, you hold anothers mind in your hands.
+            </p>
           </div>
         </div>
       </div>
-      <div className="col-sm-12 col-md-6 h-100">
+      <div className="col-sm-12 col-md-6  formContainer">
         <div className="row justify-content-center m-0 p-0 ml-2 mr-2">
           <div className="form-header d-flex flex-column justify-content-center align-items-start">
             <h2 className="row justify-content-start sign-up-header">
@@ -87,22 +89,7 @@ function Register({ history }) {
                     required
                   />
                 </div>
-                <div className="form-check d-flex align-items-start pl-0">
-                  <input type="checkbox" value="" />
-                  <label
-                    className="form-check-label check-label"
-                    for="flexCheckDefault"
-                  >
-                    By signing up, you accept our
-                    <a href="#" className="ancor">
-                      <u>Terms of Services</u>
-                    </a>{" "}
-                    and
-                    <a href="#" className="ancor">
-                      <u>Privacy Policy</u>
-                    </a>
-                  </label>
-                </div>
+
                 <div>
                   <button type="submit" className="text-center btn-proceed">
                     Sign Up

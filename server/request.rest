@@ -1,8 +1,5 @@
 GET http://localhost:5004/register
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNWZiOTI1ZTNkODIyYzA0NTg4OWVmMjk5IiwiaWF0IjoxNjA1OTczNjM2LCJleHAiOjE2MDU5NzM3MjJ9._WDgaBnMXVmHa2zP2D6IN1mtUWiGP8pKQTGExm0RlaU
-###
-
-
 
  ####
 POST  http://localhost:5004/login

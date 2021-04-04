@@ -43,12 +43,7 @@ class Books extends React.Component {
                   <h5 className="row">{el.author}</h5>
                   <h5 className="row"> count: {el.count}</h5>
                   <h5 className="row"> semester:{el.semester}</h5>
-                  {/* <tr key={el.id}>
-                      <td>{el.name.toUpperCase()}</td>
-                      <td>{el.author}</td>
-                      <td>{el.count}</td>
-                      <td>{el.semester}</td>
-                    </tr> */}
+
                   <button
                     className="btn btn-primary button"
                     onClick={() => this.issueIt(el)}

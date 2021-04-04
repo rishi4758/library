@@ -3,12 +3,27 @@
   position: relative;
   display: flex;
   text-align: center;
+  background-image: url("./images/sign.gif");
+  background-size: auto;
+  margin: 0 !important;
+  height: 72vh;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+}
+
+.regimage-container {
+  position: relative;
+  display: flex;
+  text-align: center;
   background-image: url("./images/libpic.jpeg");
   background-size: cover;
   height: 100vh;
   margin: 0 !important;
   padding: 0 !important;
 }
+
 .bg-color {
   display: flex;
   width: 100%;
@@ -30,15 +45,19 @@
   top: 0%;
 }
 .text p {
-  color: #d3d4dc;
+  color: #747476;
   font-size: 16px;
   font-family: "Assistant", sans-serif;
 }
 h1 {
-  color: #fff;
+  color: #2f313f;
   font-family: "Raleway", sans-serif;
   letter-spacing: 1px;
   display: block;
+}
+
+.loginText {
+  margin-top: 30%;
 }
 /* ------------menu container starts------------- */
 
@@ -79,6 +98,7 @@ span {
 }
 
 /* ------------form container starts------------- */
+
 .form-header {
   max-width: 350px;
   height: 90vh;

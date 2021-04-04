@@ -51,12 +51,7 @@ class Return extends React.Component {
                     <h5 className="row">{el.bookId.author}</h5>
                     <h5 className="row"> Issued: {el.date}</h5>
                     <h5 className="row"> deadline:{el.deadline}</h5>
-                    {/* <tr key={el.id}>
-                    <td>{el.name.toUpperCase()}</td>
-                    <td>{el.author}</td>
-                    <td>{el.count}</td>
-                    <td>{el.semester}</td>
-                  </tr> */}
+
                     <button
                       className="btn btn-primary button"
                       onClick={() => this.returnIt(el)}
@@ -65,21 +60,6 @@ class Return extends React.Component {
                     </button>
                   </div>
                 </div>,
-                // <tr key={el.bookId._id}>
-                //   <td>{el.bookId.name.toUpperCase()}</td>
-                //   <td>{el.bookId.author}</td>
-
-                //   <td>{el.date}</td>
-                //   <td>{el.deadline}</td>
-                //   <td>
-                //     <button
-                //       className="btn btn-primary"
-                //       onClick={() => this.returnIt(el)}
-                //     >
-                //       Return
-                //     </button>
-                //   </td>
-                // </tr>,
               ],
             })
           );

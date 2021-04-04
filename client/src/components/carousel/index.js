@@ -14,14 +14,14 @@ class Carousel extends React.Component {
             <div class="carousel-item active">
               <img
                 class="d-block w-100 carImages"
-                src="./images/b1.jpeg"
+                src="./images/sign.jpeg"
                 alt="First slide"
               />
             </div>
             <div class="carousel-item">
               <img
                 class="d-block w-100 carImages"
-                src="https://picsum.photos/id/1/1600/450"
+                src="./images/sign.jpeg"
                 alt="Second slide"
               />
             </div>
