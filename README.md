@@ -15,6 +15,11 @@ npm start<br />
 #Domain link<br/>
 Website live: http://libfront-env.eba-vuveuxpd.us-east-2.elasticbeanstalk.com/ <br/>
 
+#test user credentials <br/>
+
+email: testuser@gmail.com
+password:123@testUser
+
 
 #Demonstration<br/>
 link- https://drive.google.com/file/d/1o0fBlIcBRmcyxRQfJH6Bzj04S8NuX4_v/view?usp=sharing
