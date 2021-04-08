@@ -17,8 +17,8 @@ Website live: http://libfront-env.eba-vuveuxpd.us-east-2.elasticbeanstalk.com/ <
 
 #test user credentials <br/>
 
-email: testuser@gmail.com
-password:123@testUser
+email: testuser@gmail.com<br/>
+password:123@testUser<br/>
 
 
 #Demonstration<br/>
