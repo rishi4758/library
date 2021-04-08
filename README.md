@@ -13,7 +13,7 @@ npm install <br />
 npm start<br />
 
 #Domain link<br/>
-Website live: http://libfront-env.eba-vuveuxpd.us-east-2.elasticbeanstalk.com/form <br/>
+Website live: http://libfront-env.eba-vuveuxpd.us-east-2.elasticbeanstalk.com/ <br/>
 
 
 #Demonstration<br/>
