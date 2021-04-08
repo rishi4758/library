@@ -12,6 +12,10 @@ cd server <br />
 npm install <br />
 npm start<br />
 
+#Domain link<br/>
+Website live: http://libfront-env.eba-vuveuxpd.us-east-2.elasticbeanstalk.com/form <br/>
+
+
 #Demonstration<br/>
 link- https://drive.google.com/file/d/1o0fBlIcBRmcyxRQfJH6Bzj04S8NuX4_v/view?usp=sharing
 <br/>
@@ -23,6 +27,7 @@ testing has been done with post man and all the apis are avalable in request.res
 database has been  deployed from localhost to mongodb cloud so that no need to configure , it is already configured and connected to the app.<br/>
 
 #features<br/>
+Fully automated aws code pipeline ci/cd and deployed on aws cloud<br/>
 user can register and signup with their email and password.<br/>
 securuty for  authorisation with  JWT authentication. <br/>
 cloud available database in mongodb. <br/>
